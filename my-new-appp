@@ -1,0 +1,26 @@
+import React from 'react';
+
+function StringList({ strings }) {
+  return (
+    <ul>
+      {strings.map((str, index) => (
+        <li key={index}>{str}</li>
+      ))}
+    </ul>
+  );
+}
+
+
+import StringList from './StringList';
+
+function App() {
+  const strings = ['apple', 'banana', 'orange'];
+
+  return (
+    <div className="App">
+      <StringList strings={strings} />
+    </div>
+  );
+}
+
+export default App;

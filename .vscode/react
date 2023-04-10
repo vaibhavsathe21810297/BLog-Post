@@ -1,0 +1,39 @@
+import React from 'react';
+
+function List({ items }) {
+  return (
+    <ul>
+      {items.map((item, index) => (
+        <li key={index}>{item}</li>
+      ))}
+    </ul>
+  );
+}
+
+export default List;
+
+import React from 'react';
+import List from './List';
+
+function App() {
+  const items = ['item 1', 'item 2', 'item 3'];
+  return (
+    <div>
+      <h1>My List</h1>
+      <List items={items} />
+    </div>
+  );
+}
+
+export default App;
+
+import React from 'react';
+import ReactDOM from 'react-dom';
+import MyComponent from './MyComponent';
+
+ReactDOM.render(
+  <React.StrictMode>
+    <MyComponent />
+  </React.StrictMode>,
+  document.getElementById('root')
+);
